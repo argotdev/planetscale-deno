@@ -2,7 +2,7 @@
 
 Planetscale is a MySQL-compatible serverless database that is designed with a developer workflow where developers can create, branch, and deploy databases from the command line.
 
-We’ll use the Planetscale serverless driver, `@planetscale/database`, to work with Deno. First we want to import the connect method from this package:
+We’ll use the Planetscale serverless driver, `@planetscale/database`, to work with Deno. First we want to create ```main.ts``` and import the connect method from this package:
 
 ```tsx
 import { connect } from "npm:@planetscale/database";
@@ -32,7 +32,9 @@ const config = {
 const conn = connect(config);
 ```
 
-This will also work on Deno Deploy if you set the environment variables in the dashboard.
+This will also work on Deno Deploy if you set the environment variables in the dashboard. Run with:
+
+```deno run --allow-net --allow-env main.ts``` 
 
 The `conn` object is now an open connection to our Planetscale database.
 
