@@ -1,10 +1,8 @@
 # How to use Planetscale with Deno
 
-Planetscale is a MySQL-compatible serverless database that developers can 
+Planetscale is a MySQL-compatible serverless database that is designed with a developer workflow where developers can create, branch, and deploy databases from the command line.
 
-You can use the mysql2 package to connect to Planetscale, but they have recently released their own serverless driver, `@planetscale/database` which will be more useful for Deno applications.
-
-So, first we want to import the connect method from this package:
+We’ll use the Planetscale serverless driver, `@planetscale/database`, to work with Deno. First we want to import the connect method from this package:
 
 ```tsx
 import { connect } from "npm:@planetscale/database";
